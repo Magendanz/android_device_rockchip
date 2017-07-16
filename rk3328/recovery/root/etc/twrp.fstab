@@ -1,0 +1,17 @@
+# mount point  fstype      device                                                   [flags]
+
+/system        ext4        /dev/block/platform/ff520000.rksdmmc/by-name/system      flags=backup=1;display=System
+/data          ext4        /dev/block/platform/ff520000.rksdmmc/by-name/userdata    flags=backup=1
+/cache         ext4        /dev/block/platform/ff520000.rksdmmc/by-name/cache       flags=backup=1;display=Cache
+/metadata      ext4        /dev/block/platform/ff520000.rksdmmc/by-name/metadata    flags=backup=1;display=Metadata
+
+/uboot         emmc        /dev/block/platform/ff520000.rksdmmc/by-name/uboot       flags=backup=1;display=Uboot;flashimg
+/trust         emmc        /dev/block/platform/ff520000.rksdmmc/by-name/trust       flags=backup=1;display=Trust;flashimg
+/misc          emmc        /dev/block/platform/ff520000.rksdmmc/by-name/misc
+/resource      emmc        /dev/block/platform/ff520000.rksdmmc/by-name/resource    flags=backup=1;display=Resource;flashimg
+/kernel        emmc        /dev/block/platform/ff520000.rksdmmc/by-name/kernel      flags=backup=1;display=Kernel;flashimg
+/boot          emmc        /dev/block/platform/ff520000.rksdmmc/by-name/boot        flags=backup=1;display=Boot
+/recovery      emmc        /dev/block/platform/ff520000.rksdmmc/by-name/recovery    flags=backup=1;display=Recovery
+
+/external_sd   auto        /dev/block/mmcblk1p1                                     flags=wipeingui;storage;removable;display="External SD"
+/usb-otg       auto        /dev/block/sda1                                          flags=wipeingui;storage;removable;display="USB OTG"
