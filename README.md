@@ -6,7 +6,7 @@ Device configuration for building TWRP on Rockchip reference boards
 - To save space, a shallow clone is recommended.
 - These device configurations should be built with the **twrp-5.1** branch.
 - Copy this project to /device/rockchip/ directory.
-- The output is the ramdisk-recovery.img file, not recovery.img.
+- The output is either ramdisk-recovery.img file or recovery.img, depending what your bootloader expects.
 - The final image needs to be repacked as a Rockchip KRNL signed file.
 
 On Rockchip devices, the offset to the bootloader message block in the /misc partition is 16384, rather than the usual zero or 2048.  Unfortunately, support for BOARD_RECOVERY_BLDRMSG_OFFSET is broken pending a pull request that I've submitted.  You may need to fix this yourself by adding the following lines to bootloader_message/Android.mk:
